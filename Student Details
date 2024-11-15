@@ -1,0 +1,30 @@
+
+import java.io.*;
+import java.util.Scanner;
+
+
+ class StudentDetails {
+	public static void main(String[] args) {
+		String name;
+		int age;
+		float cgpa;
+		char grade;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the name:");
+		name=sc.nextLine();
+		System.out.println("Enter the age:");
+		age=sc.nextInt();
+		System.out.println("Enter the cgpa:");
+		cgpa=sc.nextFloat();
+		System.out.println("Enter the grade:");
+		grade=sc.next().charAt(0);
+		System.out.println("name: "+name);
+		System.out.println("age: "+age);
+		System.out.println("cgpa: "+cgpa);
+		System.out.println("grade: "+grade);
+		
+		
+		
+	}
+	
+}
