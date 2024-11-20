@@ -1,0 +1,31 @@
+package javaprogram;
+
+import java.util.*;
+
+public class TrendyNum {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int mid = 0;
+		if(n>=100 && n<=999)
+		{
+			mid = n/10;
+			mid = n%10;
+			if(mid %3==0)
+			{
+				System.out.println("it is a trendy number");
+			}
+			else
+			{
+				System.out.println("it is not a trendy number");
+			}
+		}
+		else
+		{
+			System.out.println("invaild number");
+		}
+
+	}
+
+}
