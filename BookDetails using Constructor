@@ -1,0 +1,41 @@
+package anudip;
+
+public class Book{
+	//instance variable
+	private String title;
+	private String author;
+	private double price;
+	//default constructor
+		public Book() {
+			//this constructor does not take any aruguments
+			this.title="Untitled";
+			this.author="Unknown";
+			this.price=0.0;
+		}
+	
+	
+	//parameterized constructor
+	public Book(String title,String author,double price) {
+		this.title="The god of small things";
+		this.author="Arundhati Roy";
+		this.price=300;
+	
+		
+	}
+	//method to display car details
+	public void display() {
+		System.out.println("book title:"+ title);
+		System.out.println("book author:"+ author);
+		System.out.println("book price:"+ price);
+	}
+
+	public static void main(String[] args) {
+		Book book1=new Book();
+		book1.display();
+
+		Book book2=new Book("The god of small things", "Arundhati Roy" , 300);
+		book2.display();
+
+}
+}
+
