@@ -1,0 +1,30 @@
+package anudip;
+
+
+public class Person{
+	//instance variable
+	private String firstName;
+	private String lastName;
+	private int age;
+	
+	
+	//parameterized constructor
+	public Person(String firstName,String lastName,int age) {
+		this.firstName="Ram";
+		this.lastName="krishna";
+		this.age=30;
+		
+	}
+	public void fullName() {
+		System.out.println("person  fullName:"+ (firstName+lastName));
+		System.out.println("person age:"+ age);
+	}
+
+	public static void main(String[] args) {
+		Person person1=new Person("Ram", "krishna" , 30);
+		person1.fullName();
+
+}
+}
+
+
