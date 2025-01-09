@@ -1,0 +1,44 @@
+package anudip;
+
+public class BankCustomer {
+	private int acno;
+	private String atype;
+	private double amt;
+
+	public BankCustomer(int acno, String atype, double amt) {
+		this.acno = acno;
+		this.atype = atype;
+		this.amt = amt;
+	}
+	public int getAcno()
+	{
+		return acno;
+	}
+	public String getAtype()
+	{
+		return atype;
+	}
+	public double getAmt()
+	{
+		return amt;
+	}
+	public void setAcno(int acno)
+	{
+		this.acno = acno;
+	}
+	public void setAtype(String atype)
+	{
+		this.atype = atype;
+	}
+	public void setAmt(double amt)
+	{
+		this.amt = amt;
+	}
+	public void Displaycustomerdetails()
+	{
+		System.out.println("Account Number=" +acno);
+		System.out.println("Account Type=" +atype);
+		System.out.println("Amount=" +amt);
+	}
+
+}
