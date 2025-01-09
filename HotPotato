@@ -1,0 +1,41 @@
+package javabean;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class HotPotato {
+    public static void main(String[] args) {
+        // Create a queue to represent the circle of players
+        Queue<String> players = new LinkedList<>();
+
+        // Input player names
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number of players:");
+        int numPlayers = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline
+
+        System.out.println("Enter the names of the players:");
+        for (int i = 0; i < numPlayers; i++) {
+            players.add(scanner.nextLine());
+        }
+
+        // Start the game
+        System.out.println("Enter the number of passes before stopping:");
+        int passes = scanner.nextInt();
+
+        while (players.size() > 1) {
+            // Pass the potato
+            for (int i = 0; i < passes; i++) {
+                String player = players.poll(); // Remove the front player
+                players.add(player); // Add the player back to the end of the queue
+            }
+
+            // Remove the player holding the potato when the music stops
+            System.out.println("Player " + players.poll() + " is out!");
+        }
+
+        // Declare the winner
+        System.out.println("The winner is: " + players.peek());
+    }
+}
