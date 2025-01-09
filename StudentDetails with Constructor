@@ -1,0 +1,57 @@
+package javaprogram;
+
+class Student {
+    // Instance variables
+    String name;
+    int age;
+    String department;
+
+    // Default constructor
+    public Student() {
+        this.name = "Unknown";
+        this.age = 20;
+        this.department = "Unassigned";
+    }
+
+    // Constructor with two parameters (name and age)
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+        this.department = "IT";
+    }
+
+    // Constructor with three parameters (name, age, department)
+    public Student(String name, int age, String department) {
+        this.name = name;
+        this.age = age;
+        this.department = department;
+    }
+
+    // Method to print student details
+    public void printDetails() {
+        System.out.println("Name: " + name + ", Age: " + age + ", Department: " + department);
+    }
+}
+
+public class MainStudent {
+    public static void main(String[] args) {
+        // Creating instances using different constructors
+        Student student1 = new Student(); // Default constructor
+        Student student2 = new Student("Tanuja", 22); // Constructor with two parameters
+        Student student3 = new Student("Rohith", 24, "Computer Science"); // Constructor with three parameters
+
+        // Printing student details
+        System.out.println("Student 1 Details:");
+        student1.printDetails();
+
+        System.out.println("\nStudent 2 Details:");
+        student2.printDetails();
+
+        System.out.println("\nStudent 3 Details:");
+        student3.printDetails();
+    }
+}
+
+
+
+
