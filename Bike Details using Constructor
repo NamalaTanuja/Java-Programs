@@ -1,0 +1,41 @@
+package anudip;
+
+public class Bike {
+	//instance variable
+	private String model;
+	private int year;
+	private String color;
+	//default constructor
+		public Bike() {
+			//this constructor does not take any aruguments
+			this.model="Yamaha";
+			this.year=2024;
+			this.color="black";
+			System.out.println("default constructor called");
+		}
+	
+	
+	//parameterized constructor
+	public Bike(String model,int year,String color) {
+		this.model="Royal Enfield";
+		this.year=2024;
+		this.color="black";
+		System.out.println("parameterized constructor called");
+		
+	}
+	//method to display car details
+	public void displaybikeDetails() {
+		System.out.println("bike model:"+ model);
+		System.out.println("bike year:"+ year);
+		System.out.println("bike color:"+ color);
+	}
+
+	public static void main(String[] args) {
+		Bike bike1=new Bike();
+		bike1.displaybikeDetails();
+
+		Bike bike2=new Bike("Royal Enfield" , 2024," black");
+		bike2.displaybikeDetails();
+
+}
+}
