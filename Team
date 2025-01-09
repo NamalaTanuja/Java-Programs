@@ -1,0 +1,18 @@
+package javabean;
+
+import java.util.*;
+
+public class Team {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int frnds = sc.nextInt();
+		int team = sc.nextInt();
+		int frndsPerTeam = frnds/team;
+		int leftover = frnds % team;
+		System.out.println("the no of frnds in each team is"+ frndsPerTeam);
+		System.out.println("the no of frnds left out is"+ leftover);
+		
+	}
+
+}
