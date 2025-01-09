@@ -1,0 +1,20 @@
+package javabean;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class ReverseList {
+    public static void main(String[] args) {
+        // Create a List of strings
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add("Apple");
+        strings.add("Banana");
+        strings.add("Cherry");
+
+        // Reverse the list
+        Collections.reverse(strings);
+
+        // Print the reversed list
+        System.out.println("Reversed list: " + strings);
+    }
+}
