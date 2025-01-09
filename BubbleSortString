@@ -1,0 +1,33 @@
+package javabean;
+
+import java.util.Arrays;
+
+public class BubbleSortString {
+    public static void main(String[] args) {
+        // Original array
+        String[] arr = {"banana", "apple", "cherry", "grape"};
+
+        // Print original array
+        System.out.println("Original Array: " + Arrays.toString(arr));
+
+        // Bubble sort implementation for strings
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j].compareTo(arr[j + 1]) > 0) {
+                    // Swap
+                    String temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+
+        // Print sorted array
+        System.out.println("Sorted Array (Bubble Sort): " + Arrays.toString(arr));
+
+        // Using Arrays.sort()
+        String[] arr2 = {"banana", "apple", "cherry", "grape"};
+        Arrays.sort(arr2);
+        System.out.println("Sorted Array (Arrays.sort): " + Arrays.toString(arr2));
+    }
+}
