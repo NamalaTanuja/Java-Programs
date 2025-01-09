@@ -1,0 +1,50 @@
+package javabean;
+
+//Base class: Vehicle
+class Vehicle {
+ // Method to print "Vehicle started."
+ void start() {
+     System.out.println("Vehicle started.");
+ }
+}
+
+//Subclass: Car
+class Car extends Vehicle {
+ // Override start method
+ void start() {
+     System.out.println("Car started.");
+ }
+}
+
+//Subclass: Motorcycle
+class Motorcycle extends Vehicle {
+	 void start() {
+     System.out.println("Motorcycle started.");
+ }
+}
+
+class Garage {
+ // Method to service a vehicle
+ void serviceVehicle(Vehicle vehicle) {
+     vehicle.start(); 
+     System.out.println("Vehicle serviced.");
+ }
+}
+
+//Main class
+public class Mainn {
+ public static void main(String[] args) {
+     Car car = new Car();
+     Motorcycle motorcycle = new Motorcycle();
+     Garage garage = new Garage();
+
+     // Call serviceVehicle() for Car
+     System.out.println("Servicing Car:");
+     garage.serviceVehicle(car);
+
+     // Call serviceVehicle() for Motorcycle
+     System.out.println("Servicing Motorcycle:");
+     garage.serviceVehicle(motorcycle);
+ }
+}
+
