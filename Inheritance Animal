@@ -1,0 +1,45 @@
+package javaprogram;
+
+//Superclass Animal
+class Animal {
+ // Method to make a sound
+ void makeSound() {
+     System.out.println("The animal makes a sound.");
+ }
+}
+
+//Subclass Dog
+class Dog extends Animal {
+ @Override
+ void makeSound() {
+     System.out.println("The dog barks.");
+ }
+}
+
+//Subclass Cat
+class Cat extends Animal {
+ @Override
+ void makeSound() {
+     System.out.println("The cat meows.");
+ }
+}
+
+//Main Class
+public class MainAnimal {
+ public static void main(String[] args) {
+     // Creating objects for each class
+     Animal animal = new Animal();
+     Dog dog = new Dog();
+     Cat cat = new Cat();
+
+     // Calling the makeSound() method
+     System.out.println("Calling makeSound() from Animal class:");
+     animal.makeSound(); 
+
+     System.out.println("\nCalling makeSound() from Dog class:");
+     dog.makeSound(); 
+
+     System.out.println("\nCalling makeSound() from Cat class:");
+     cat.makeSound();
+ }
+}
