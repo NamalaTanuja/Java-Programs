@@ -1,0 +1,33 @@
+package javaprogram;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ContainerPairing {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the number of containers
+        int numContainers = scanner.nextInt();
+
+        // Read the container capacities
+        int[] capacities = new int[numContainers];
+        for (int i = 0; i < numContainers; i++) {
+            capacities[i] = scanner.nextInt();
+        }
+
+        // Sort the capacities array
+        Arrays.sort(capacities);
+
+        // Pair containers: max capacity with min capacity
+        for (int i = 0; i < numContainers / 2; i++) {
+            int maxCapacity = capacities[numContainers - 1 - i];
+            int minCapacity = capacities[i];
+            System.out.println("Pair: " + maxCapacity + " - " + minCapacity);
+        }
+
+        // If there's an odd number of containers, one will be left unpaired
+        if (numContainers % 2 != 0) {
+            System.out.println("Unpaired: " + capacities[numContainers / 2]);
+        }
+    }
+}
